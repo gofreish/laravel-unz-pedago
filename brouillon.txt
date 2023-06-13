@@ -1,0 +1,69 @@
+-->Gestion de la partie etudiant : 
+Les requetes sont triées par ordre alphabetique
+->La selection se fait suivant la filiere puis la promotion et/ou l'INE
+
+
+
+
+
+Note a moi meme 
+Pour le systeme de log : 
+on aura les champs : auteur; description; destination; date et heure;
+Je doute enre enregister dans un fichier ou dans une table 
+
+moyenga geswende rachelle
+
+Comprendre le stockage sur disque locale
+
+Filiere et promotion de travail : Mathématiques Physique Chimie Informatique (MPCI) 2021
+    et Informatique 2021 
+
+obtention de la liste des devoirs
+
+Precision de session normale ou de rattrapage
+
+Faire la difference entre session normale et rattrapage
+
+TAF : Recuperer les notes et calculer.
+
+Note controller :
+[
+    0 =>[
+            ine,
+            nom,
+            prenom,
+            date_de_naissance,
+            UES => [
+                1 => [
+                        ecu1 => note1,
+                        ecu2 => note2,
+                        moyenne => moy,
+                        pondere => pon
+                ]
+                2 => [
+                        ecu1 => note1,
+                        ecu2 => note2,
+                        moyenne => moy,
+                        pondere => pon
+                ]
+            ]
+            total,
+            moyenne,
+            resultat,
+            mention
+    ]
+    0 =>[
+        
+    ]
+]
+    (Il n y a pas de double inscription)
+    on recupere la liste complete des etudiants concernés
+        on les places dans un array asso
+    On boule sur les UE.
+
+    on verifie l existence des notes
+
+    update les imports et create d etudiant au changement de colonne
+
+    TAF
+    Deliberer S2 et determiner comment faire paser des étudiants et doubler d autres 
