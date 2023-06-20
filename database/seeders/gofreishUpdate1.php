@@ -529,5 +529,18 @@ class gofreishUpdate1 extends Seeder
         $rolesForMe = DB::getPdo()->lastInsertId();
         $this->setRole( 'admin', $rolesForMe );
 
+        //Ajout du lien statisque_barro dans le menu
+        DB::table('menus')
+        ->insert([
+            'name' => 'statistique_barro',
+            'href' => "/", //met ici le lien vers ta page des statisques
+            'icon' => 'cil-pen-nib',//ici tu met le nom de l icone que tu veux
+            'slug' => 'link', //ca c'est pour que ca s affiche sous forme de lien
+            'parent_id' => null,
+            'menu_id' => $menuUnzId,
+            'sequence' => 31 //c'est très important que les séquences soient dans le bon ordre si non ca va mélanger le menu
+        ]);
+        $unz_DonnéesId = DB::getPdo()->lastInsertId();
+        $this->setRole( 'admin', $unz_DonnéesId );
     }
 }
